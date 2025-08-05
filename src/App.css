@@ -1,0 +1,243 @@
+body, .app-background {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #10131a 0%, #181c24 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.app-background::before, .app-background::after {
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app-background::before {
+  background:
+    radial-gradient(circle at 10% 20%, #fff 1.5px, transparent 1.5px),
+    radial-gradient(circle at 80% 30%, #fff 1.2px, transparent 1.2px),
+    radial-gradient(circle at 50% 80%, #fff 1.8px, transparent 1.8px),
+    radial-gradient(circle at 70% 60%, #fff 1.1px, transparent 1.1px),
+    radial-gradient(circle at 30% 50%, #fff 1.4px, transparent 1.4px),
+    radial-gradient(circle at 60% 10%, #fff 1.3px, transparent 1.3px),
+    radial-gradient(circle at 90% 90%, #fff 1.7px, transparent 1.7px),
+    radial-gradient(circle at 20% 80%, #fff 1.2px, transparent 1.2px),
+    radial-gradient(circle at 40% 70%, #fff 1.6px, transparent 1.6px),
+    radial-gradient(circle at 75% 15%, #fff 1.3px, transparent 1.3px);
+  opacity: 0.7;
+}
+
+.app-background::after {
+  background:
+    radial-gradient(circle at 15% 60%, #fff 1.1px, transparent 1.1px),
+    radial-gradient(circle at 60% 40%, #fff 1.5px, transparent 1.5px),
+    radial-gradient(circle at 85% 80%, #fff 1.2px, transparent 1.2px),
+    radial-gradient(circle at 35% 25%, #fff 1.3px, transparent 1.3px),
+    radial-gradient(circle at 55% 55%, #fff 1.4px, transparent 1.4px),
+    radial-gradient(circle at 25% 90%, #fff 1.2px, transparent 1.2px),
+    radial-gradient(circle at 95% 10%, #fff 1.6px, transparent 1.6px),
+    radial-gradient(circle at 10% 90%, #fff 1.3px, transparent 1.3px),
+    radial-gradient(circle at 80% 70%, #fff 1.5px, transparent 1.5px),
+    radial-gradient(circle at 60% 85%, #fff 1.1px, transparent 1.1px);
+  opacity: 0.5;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Neon Game Board */
+.game-board {
+  background: linear-gradient(180deg, #10131a 0%, #181c24 100%);
+  border: 4px solid #00ffe7;
+  box-shadow: 0 0 40px #00ffe7, 0 0 10px #00ffe7 inset;
+  border-radius: 18px;
+  margin: 40px auto 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-board::before, .game-board::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.game-board::before {
+  background:
+    radial-gradient(circle at 10% 20%, #fff 1.5px, transparent 1.5px),
+    radial-gradient(circle at 80% 30%, #fff 1.2px, transparent 1.2px),
+    radial-gradient(circle at 50% 80%, #fff 1.8px, transparent 1.8px),
+    radial-gradient(circle at 70% 60%, #fff 1.1px, transparent 1.1px),
+    radial-gradient(circle at 30% 50%, #fff 1.4px, transparent 1.4px),
+    radial-gradient(circle at 60% 10%, #fff 1.3px, transparent 1.3px),
+    radial-gradient(circle at 90% 90%, #fff 1.7px, transparent 1.7px),
+    radial-gradient(circle at 20% 80%, #fff 1.2px, transparent 1.2px),
+    radial-gradient(circle at 40% 70%, #fff 1.6px, transparent 1.6px),
+    radial-gradient(circle at 75% 15%, #fff 1.3px, transparent 1.3px);
+  opacity: 0.7;
+}
+
+.game-board::after {
+  background:
+    radial-gradient(circle at 15% 60%, #fff 1.1px, transparent 1.1px),
+    radial-gradient(circle at 60% 40%, #fff 1.5px, transparent 1.5px),
+    radial-gradient(circle at 85% 80%, #fff 1.2px, transparent 1.2px),
+    radial-gradient(circle at 35% 25%, #fff 1.3px, transparent 1.3px),
+    radial-gradient(circle at 55% 55%, #fff 1.4px, transparent 1.4px),
+    radial-gradient(circle at 25% 90%, #fff 1.2px, transparent 1.2px),
+    radial-gradient(circle at 95% 10%, #fff 1.6px, transparent 1.6px),
+    radial-gradient(circle at 10% 90%, #fff 1.3px, transparent 1.3px),
+    radial-gradient(circle at 80% 70%, #fff 1.5px, transparent 1.5px),
+    radial-gradient(circle at 60% 85%, #fff 1.1px, transparent 1.1px);
+  opacity: 0.5;
+}
+
+/* Neon Header */
+.neon-header {
+  color: #00ffe7;
+  font-size: 2.5rem;
+  font-family: 'Orbitron', 'Arial', sans-serif;
+  text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+  margin-bottom: 10px;
+}
+
+/* Neon Score */
+.neon-score {
+  color: #fff200;
+  font-size: 1.5rem;
+  font-family: 'Orbitron', 'Arial', sans-serif;
+  text-shadow: 0 0 10px #fff200, 0 0 20px #fff200;
+  margin-bottom: 20px;
+}
+
+/* Neon Snake Segment */
+.snake-segment {
+  background: #00ff85;
+  box-shadow: 0 0 10px #00ff85, 0 0 20px #00ff85;
+  border-radius: 6px;
+  position: absolute;
+  transition: top 0.1s, left 0.1s;
+}
+
+/* Neon Food */
+.neon-food {
+  background: #ff00c8;
+  box-shadow: 0 0 15px #ff00c8, 0 0 30px #ff00c8;
+  border-radius: 50%;
+  position: absolute;
+  transition: top 0.2s, left 0.2s;
+}
+
+/* Neon Snake Face */
+.snake-face {
+  background: #00aaff;
+  box-shadow: 0 0 20px #00aaff, 0 0 40px #00aaff;
+  border-radius: 8px;
+  position: absolute;
+  transition: top 0.1s, left 0.1s;
+}
+
+/* Game Over Overlay */
+.game-over-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 28, 36, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.game-over-text {
+  color: #ff004c;
+  font-size: 3rem;
+  font-family: 'Orbitron', 'Arial', sans-serif;
+  text-shadow: 0 0 20px #ff004c, 0 0 40px #ff004c;
+  margin-bottom: 20px;
+}
+
+.restart-btn {
+  background: #00ffe7;
+  color: #181c24;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.2rem;
+  font-family: 'Orbitron', 'Arial', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffe7;
+  transition: background 0.2s, color 0.2s;
+}
+.restart-btn:hover {
+  background: #fff200;
+  color: #181c24;
+  box-shadow: 0 0 20px #fff200;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .game-board {
+    width: 98vw !important;
+    height: 98vw !important;
+    max-width: 98vw;
+    max-height: 98vw;
+  }
+}
