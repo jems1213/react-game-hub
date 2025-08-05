@@ -1,4 +1,10 @@
 {
+  "homepage": "https://jems1213.github.io/react-game-hub",
+  "scripts":
+   {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "name": "snake-game",
   "version": "0.1.0",
   "private": true,
@@ -35,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
