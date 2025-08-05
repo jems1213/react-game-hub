@@ -1,10 +1,5 @@
 {
   "homepage": "https://jems1213.github.io/react-game-hub",
-  "scripts":
-   {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
   "name": "snake-game",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
